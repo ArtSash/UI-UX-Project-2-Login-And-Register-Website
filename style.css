@@ -83,8 +83,37 @@ header {
     color: #162938;
 }
 
+.content {
+    text-align: center;
+    color: #162938;
+}
+
+.content h1 {
+    font-size: 65px;
+    margin-bottom: 12px;
+}
+
+.content p {
+    font-size: 22px;
+    margin-bottom: 35px;
+}
+
+.content .btn {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #162938;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.content .btn:hover {
+    background-color: #184e7a;
+}
+
 .wrapper {
-    position: relative;
+    position: absolute;
     width: 400px;
     height: 440px;
     background: transparent;
@@ -98,6 +127,7 @@ header {
     overflow: hidden;
     transform: scale(0);
     transition: transform .5s ease, height .2s ease;
+    z-index: 2;
 }
 
 .wrapper.active-popup {
@@ -236,6 +266,11 @@ header {
     font-size: 1em;
     color: #fff;
     font-weight: 500;
+    transition: .3s ease;
+}
+
+.btn:hover {
+    background-color: #184e7a;
 }
 
 .login-register {
