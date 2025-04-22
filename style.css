@@ -8,7 +8,7 @@
 }
 
 body {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -83,6 +83,13 @@ header {
     color: #162938;
 }
 
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .content {
     text-align: center;
     color: #162938;
@@ -112,8 +119,76 @@ header {
     background-color: #184e7a;
 }
 
+.service {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px 9%;
+    color: #333;
+    text-align: center;
+}
+
+.service .heading {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.service .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.features .box {
+    padding: 30px 20px;
+    background: #fff;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.features .box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+}
+
+.box i {
+    font-size: 60px;
+    color: #162938;
+}
+
+.box h2 {
+    font-size: 25px;
+}
+
+.box p {
+    margin: 10px 0 18px;   
+}
+
+.box .button {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #162938;
+    border: 2px solid #162938;
+    border-radius: 6px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.box .button:hover {
+    background: transparent;
+    color: #162938;
+}
+
 .wrapper {
-    position: absolute;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
     width: 400px;
     height: 440px;
     background: transparent;
@@ -289,4 +364,16 @@ header {
 
 .login-register p a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 992px) {
+    .service {
+        padding: 20px 5%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .service .features {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 }
