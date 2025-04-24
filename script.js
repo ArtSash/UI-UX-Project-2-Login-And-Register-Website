@@ -4,6 +4,18 @@ const loginLink = document.querySelector('.login-link');
 const popupButton = document.querySelector('.Login-popup-button');
 const iconClose = document.querySelector('.icon-close');
 
+document.addEventListener('DOMContentLoaded', () => {
+
+const testimonialSwiper = new Swiper('.feedback',{ 
+    speed: 400,
+    loop: true,
+    spaceBetween: 30,
+    navigation:{
+        nextEl: ".btn_next",
+        prevEl: ".btn_previous",
+    },
+});
+
 registerLink.addEventListener('click', ()=> {
     wrapper.classList.add('active');
 });
@@ -18,4 +30,5 @@ popupButton.addEventListener('click', ()=> {
 
 iconClose.addEventListener('click', ()=> {
     wrapper.classList.remove('active-popup');
+});
 });
