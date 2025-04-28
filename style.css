@@ -185,6 +185,7 @@ header {
 .testimonial .heading {
     color: #162938;
     font-size: 50px;
+    padding-top: 5%;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -645,5 +646,11 @@ a.cta_btn:hover {
     }
     a.cta_btn {
         font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .list {
+        padding: 20px 5%;
     }
 }
