@@ -649,8 +649,13 @@ a.cta_btn:hover {
     }
 }
 
-@media screen and (max-width: 992px) {
-    .list {
-        padding: 20px 5%;
+@media screen {
+    .item {
+        position: relative;
+        width: 1024px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 1fr;
+        grid-gap: 0.5rem;
+        padding: 20px 2%;
     }
 }
