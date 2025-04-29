@@ -698,7 +698,7 @@ a.cta_btn:hover {
 @media screen {
     .item {
         position: relative;
-        width: 1024px;
+        width: 992px;
         grid-template-columns: 1fr;
         grid-template-rows: 100px 1fr;
         grid-gap: 0.5rem;
