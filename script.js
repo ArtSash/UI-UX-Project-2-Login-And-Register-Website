@@ -1,11 +1,25 @@
+const burger = document.querySelector('.burger');
+const navigation = document.querySelector ('.navigation');
 const wrapper = document.querySelector('.wrapper');
 const registerLink = document.querySelector('.register-link');
 const loginLink = document.querySelector('.login-link');
 const popupButton = document.querySelector('.Login-popup-button');
 const iconClose = document.querySelector('.icon-close');
-let list = document.querySelectorAll('.list .item')
+let list = document.querySelectorAll('.list .item');
+let menuOpen = false;
 
 document.addEventListener('DOMContentLoaded', () => {
+
+burger.addEventListener('click', () => {
+    if (menuOpen == false) {
+        navigation.style.display = 'block';
+        menuOpen = true;
+    }
+    else if (menuOpen == true) {
+        navigation.style.display = 'none';
+        menuOpen = false;
+    }
+});
 
 registerLink.addEventListener('click', ()=> {
     wrapper.classList.add('active');

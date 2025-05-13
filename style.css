@@ -17,8 +17,8 @@ body {
     background-position: center;
 }
 
-header {
-    position: absolute;
+header .menu {
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -81,6 +81,19 @@ header {
 .navigation .Login-popup-button:hover {
     background: #fff;
     color: #162938;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    width: 34px;
+}
+
+.burger .bar {
+    background-color: #ffffff;
+    flex-basis: 100%;
+    height: 4px;
+    margin: 3px;
 }
 
 .hero {
@@ -550,8 +563,8 @@ a.cta_btn:hover {
 
 .item {
     background-color: #fff;
-    width: calc(100% - 1350px);
-    padding: 20px;
+    width: 1000px;
+    padding: 20px 25px;
     border-radius: 15px;
     transition: 0.8s;
     margin-bottom: 15px;
@@ -608,16 +621,14 @@ a.cta_btn:hover {
 
 .contacts {
     width: 100%;
-    height: 70vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .map {
-    width: 48%;
-    height: 70vh;
-    padding-left: 40px;
+    width: 50%;
 }
 
 .contacts .details{
@@ -717,33 +728,19 @@ a.cta_btn:hover {
     color: black;
 }
 
-@media screen and (max-width: 992px) {
-    .service {
-        padding: 20px 5%;
+@media screen and (max-width: 400px) {
+    .logo {
+        font-size: 20px;
     }
-}
 
-@media screen and (max-width: 350px) {
     .service .features {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
 
-@media screen and (max-width: 1024px) {
-    .grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 2%;
-    }
-}
-
-@media screen and (max-width: 425px) {
-    .grid {
-        grid-template-columns: 1fr;
-        gap: 2%;
-        padding-bottom: 25%;
-    }
-    .container {
-        padding: 0 1rem;
+@media screen and (max-width: 450px) {
+    .container .grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
     body {
         font-size: 14px;
@@ -766,20 +763,110 @@ a.cta_btn:hover {
     }
 }
 
-@media screen {
+@media (max-width: 768px) {
     .item {
-        position: relative;
-        width: 992px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 100px 1fr;
-        grid-gap: 0.5rem;
-        padding: 20px 2%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .item .question .text {
+        font-size: 16px;
+    }
+
+    .item .answer {
+        font-size: 14px;
+    }
+
+    .contacts {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .contacts_title {
+        margin-top: 30px;
+    }
+
+    .map {
+        width: 100%;
+        height: 300px;
+    }
+
+    .map iframe {
+        width: 100%;
+        height: 100%;
     }
 }
 
-@media (max-width:1690px) {
+@media (max-width:768px) {
+    .header .menu {
+        flex-wrap: flex;
+    }
+
+    .burger {
+        display: flex;
+        flex-wrap: wrap;
+        size: 10px;
+    }
+
+    .navigation {
+        display: none;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+
+    .navigation a {
+        flex-basis: 100%;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .navigation .Login-popup-button {
+        width: 100px;
+        height: 40px;
+        font-size: 18px;
+    }
+
     .footer {
-        padding: 50px 5% 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+        gap: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .service {
+        padding: 20px 5%;
+    }
+
+    .service .heading {
+        color: #162938;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2%;
+        padding-bottom: 25%;
+    }
+
+    .contacts {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .contacts_title {
+        margin-top: 30px;
+    }
+
+    .map {
+        width: 100%;
+        height: 300px;
+    }
+
+    .map iframe {
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -791,10 +878,8 @@ a.cta_btn:hover {
     }
 }
 
-@media (max-width:700px) {
+@media (max-width:1690px) {
     .footer {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, auto));
-        gap: 2.5rem;
+        padding: 50px 5% 40px;
     }
 }
