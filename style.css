@@ -18,7 +18,7 @@ body {
 }
 
 header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -141,6 +141,8 @@ header {
 }
 
 .features .box {
+    display: flex;
+    flex-direction: column;
     padding: 30px 20px;
     background: #fff;
     border-radius: 10px;
@@ -167,6 +169,10 @@ header {
 
 .box .button {
     display: inline-block;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
     padding: 8px 20px;
     background: #162938;
     border: 2px solid #162938;
@@ -560,11 +566,11 @@ a.cta_btn:hover {
     display: flex;
     justify-content: start;
     align-items: center;
+    font-size: 25px;
+    font-weight: 500;
 }
 
 .item .question .text {
-    font-size: 25px;
-    font-weight: 500;
     width: calc(100% - 10px);
 }
 
@@ -578,6 +584,7 @@ a.cta_btn:hover {
 
 .item .answer {
     overflow: hidden;
+    font-size: 20px;
     max-height: 0;
     transition: 0.8s;
 }
@@ -596,34 +603,38 @@ a.cta_btn:hover {
 }
 
 .item.active .answer {
-    font-size: 20px;
-    max-height: 200px;
+    max-height: 300px;
 }
 
 .contacts {
     width: 100%;
-    height: 50vh;
-    background: #fff;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .map {
-    width: 50%;
+    width: 48%;
+    height: 70vh;
     padding-left: 40px;
 }
 
+.contacts .details{
+    margin-bottom: 100px;
+    margin-right: 25px;
+}
+
 .contacts_title {
-    padding: 20px 20px 20px 30px;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.294);
+    padding: 5px 20px 20px 30px;
+    border-bottom: 1px solid rgb(255, 255, 255);
     font-size: 30px;
     font-weight: 500;
 }
 
 .contacts a {
     text-decoration: none;
-    color: #000;   
+    color: #ffffff;   
 }
 
 .contacts a:hover {
@@ -635,15 +646,75 @@ a.cta_btn:hover {
     display: flex;
     align-items: center;
     gap: 5px;
+    color: #ffffff;
 }
 
 .details i {
     font-size: 30px;
-    padding-right: 5px; 
+    padding-right: 5px;
+    color: #ffffff;
 }
 
 .phone, .address, .website, .hours {
     padding: 20px 20px 0px 30px;
+}
+
+.footer {
+    padding: 80px 13% 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 3.5rem;
+    background: #ffffff;
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.footer-content h4 {
+    color: black;
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+}
+
+.footer-content li {
+    margin-bottom: 16px;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.footer-content li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all 0.4s ease;
+}
+
+.footer-content li a:hover {
+    transform: translateY(-3px) translateX(-5px);
+    color: black;
+}
+
+.footer-content p {
+    color: black;
+    font-size: 16px;
+    line-height: 30px;
+    margin: 20px 0;
+}
+
+.icons a {
+    display: inline-block;
+    font-size: 22px;
+    color: black;
+    margin-right: 17px;
+    transition: all 0.4s ease;
+}
+
+.icons a:hover {
+    transform: translateY(-3px) translateX(-5px);
+    color: black;
 }
 
 @media screen and (max-width: 992px) {
@@ -703,5 +774,27 @@ a.cta_btn:hover {
         grid-template-rows: 100px 1fr;
         grid-gap: 0.5rem;
         padding: 20px 2%;
+    }
+}
+
+@media (max-width:1690px) {
+    .footer {
+        padding: 50px 5% 40px;
+    }
+}
+
+@media (max-width:1120px) {
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+        gap: 2rem;
+    }
+}
+
+@media (max-width:700px) {
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+        gap: 2.5rem;
     }
 }

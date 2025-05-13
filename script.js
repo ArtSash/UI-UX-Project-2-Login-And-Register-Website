@@ -53,5 +53,4 @@ list.forEach(item => {
     }
 });
 });
-
 });
